@@ -1,0 +1,263 @@
+index.html<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JUKWAA BORA - Elimu + Fursa + Ubunifu</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI', Tahoma, sans-serif}
+  html{scroll-behavior:smooth}
+  body{background:#f0f4f8;color:#222}
+
+  /* RANGI NO.1: NAVY + GOLD */
+  header{position:sticky;top:0;background:#16213e;box-shadow:0 3px 15px rgba(0,0,0,0.2);z-index:100;padding:15px 20px}
+.wrap{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px}
+  header h1{color:#ffcc00;font-size:2rem;font-weight:900;letter-spacing:2px}
+  nav a{margin:0 12px;text-decoration:none;color:#eee;font-weight:600}
+  nav a:hover{color:#ffcc00}
+
+.container{max-width:1100px;margin:auto;padding:50px 20px}
+.card{background:#fff;border-radius:20px;padding:40px;box-shadow:0 8px 30px rgba(0,0,0,0.08);margin-bottom:50px;border-top:4px solid #16213e}
+
+.hero{background:linear-gradient(135deg, #16213e 0%, #0f3460 100%);color:#fff;text-align:center;padding:80px 30px;border-top:none}
+.hero h2{font-size:3.2rem;margin-bottom:20px;font-weight:900;color:#ffcc00}
+.hero p{font-size:1.3rem;margin-bottom:40px}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(200px,1fr));gap:18px;margin-top:40px}
+.service-card{background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);padding:20px;border-radius:15px;font-weight:700;border:1px solid rgba(255,204,0,0.3)}
+.btn{padding:15px 35px;border-radius:12px;text-decoration:none;font-weight:700;margin:10px;cursor:pointer;border:none;font-size:1.05rem;display:inline-block;transition:0.3s}
+.btn-primary{background:#ffcc00;color:#16213e}
+.btn-primary:hover{background:#ffd633}
+
+ /* GALLERY ADMIN ONLY */
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:30px}
+.gallery-card{border:3px dashed #16213e;border-radius:20px;padding:30px;text-align:center;min-height:320px;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#f8f9fa}
+.gallery-card img{max-width:100%;border-radius:15px;max-height:250px;object-fit:contain}
+.upload-btn{background:#16213e;color:#ffcc00;padding:14px 28px;border-radius:12px;cursor:pointer;margin-top:15px;border:none;font-weight:700;font-size:1rem}
+.confirm-btn{background:#28a745;color:#fff;padding:12px 25px;border-radius:10px;cursor:pointer;margin-top:10px;border:none;font-weight:700;display:none}
+  input[type=file]{display:none}
+.locked-msg{color:#28a745;font-weight:700;margin-top:10px;display:none;font-size:1.05rem}
+.admin-only{color:#dc3545;font-size:0.9rem;font-weight:700;margin-bottom:10px}
+
+ /* CHATBOT */
+.chatbot-box{border:3px solid #25d366;border-radius:20px;padding:30px;background:#e8f8f0}
+  #chatDisplay{height:230px;overflow-y:auto;background:#fff;border-radius:14px;padding:20px;margin-bottom:20px;border:2px solid #ddd}
+.bot-msg{background:#e3ecff;padding:14px 18px;border-radius:14px;margin:12px 0;max-width:85%;white-space:pre-line;border-left:4px solid #16213e}
+.user-msg{background:#25d366;color:#fff;padding:14px 18px;border-radius:14px;margin:12px 0;margin-left:auto;max-width:85%;text-align:right}
+.chat-input{display:flex;gap:12px}
+.chat-input input{flex:1;padding:15px;border-radius:12px;border:2px solid #ccc;font-size:1rem}
+.quick-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}
+.quick-btn{background:#fff;border:2px solid #16213e;color:#16213e;padding:10px 18px;border-radius:25px;font-size:0.92rem;cursor:pointer;font-weight:700}
+.quick-btn:hover{background:#16213e;color:#ffcc00}
+
+ /* TESTIMONIAL NO.5 */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(310px,1fr));gap:25px;margin-top:30px}
+.testi-card{padding:30px;border-radius:20px;border-left:6px solid #ffcc00}
+.testi-card:nth-child(1){background:#16213e;color:#fff} /* Notes */
+.testi-card:nth-child(2){background:#0f3460;color:#fff} /* Logo */
+.testi-card:nth-child(3){background:#1a1a2e;color:#ffcc00} /* Biashara */
+.stars{color:#ffcc00;font-size:1.5rem;margin-bottom:15px}
+.testi-card p{font-style:italic;margin-bottom:18px;font-size:1.1rem}
+.testi-card h4{color:#ffcc00;font-weight:800}
+
+.contact{background:#16213e;color:#fff;text-align:center;padding:70px 30px;border-top:4px solid #ffcc00}
+.btn-whatsapp{background:#25d366;color:#fff;font-size:1.2rem;padding:18px 40px}
+  footer{text-align:center;padding:28px;color:#aaa;background:#0f0f23}
+
+  @media(max-width:768px){.gallery-grid{grid-template-columns:1fr} nav{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>JUKWAA BORA</h1>
+    <nav>
+      <a href="#huduma">Huduma</a>
+      <a href="#mifano">Mifano</a>
+      <a href="#maoni">Maoni</a>
+      <a href="#uliza">Uliza</a>
+      <a href="#wasiliana">Wasiliana</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero card">
+  <h2>JUKWAA BORA</h2>
+  <p>Elimu + Fursa + Ubunifu, Sehemu Moja</p>
+  <div class="services-grid" id="huduma">
+    <div class="service-card">📚 Notes Form 3-6 Mitaala Mpya TZ</div>
+    <div class="service-card">📢 Matangazo ya Biashara</div>
+    <div class="service-card">🎨 Logo, Poster, CV za Kitaalamu</div>
+    <div class="service-card">💻 Mafunzo ya Kipato Online</div>
+    <div class="service-card">📊 Project Planning & Budget</div>
+  </div>
+  <a href="#mifano" class="btn btn-primary">Angalia Mifano</a>
+</section>
+
+<section class="container">
+  <div class="card" id="mifano">
+    <h2 style="margin-bottom:10px;color:#16213e;font-size:2rem">MIFANO YA KAZI ZETU</h2>
+    <p class="admin-only">🔒 ADMIN ONLY: Chagua picha mara 1, thibitisha, halafu inafungwa kabisa</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-card" id="box1">
+        <p id="p1" style="color:#999">Hakuna picha bado</p>
+        <img id="img1" style="display:none">
+        <label class="upload-btn" id="btn1">Chagua Picha 1
+          <input type="file" accept="image/*" onchange="previewImage(event,'img1','p1','btn1','confirm1')">
+        </label>
+        <button class="confirm-btn" id="confirm1" onclick="lockImage('box1','confirm1','btn1','lock1','img1')">Thibitisha & Hifadhi</button>
+        <p class="locked-msg" id="lock1">✓ IMEHIFADHIWA - Haiwezi kubadilika tena</p>
+      </div>
+
+      <div class="gallery-card" id="box2">
+        <p id="p2" style="color:#999">Hakuna picha bado</p>
+        <img id="img2" style="display:none">
+        <label class="upload-btn" id="btn2">Chagua Picha 2
+          <input type="file" accept="image/*" onchange="previewImage(event,'img2','p2','btn2','confirm2')">
+        </label>
+        <button class="confirm-btn" id="confirm2" onclick="lockImage('box2','confirm2','btn2','lock2','img2')">Thibitisha & Hifadhi</button>
+        <p class="locked-msg" id="lock2">✓ IMEHIFADHIWA - Haiwezi kubadilika tena</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card chatbot-box" id="uliza">
+    <h2 style="color:#25d366;margin-bottom:15px;font-size:2rem">🤖 JUKWAA BOT</h2>
+    <div id="chatDisplay">
+      <div class="bot-msg">Habari mkuu! Niulize kuhusu huduma zetu 👇</div>
+    </div>
+    <div class="quick-btns">
+      <button class="quick-btn" onclick="botReply('Mna huduma gani?')">Mna huduma gani?</button>
+      <button class="quick-btn" onclick="botReply('Bei ya logo ni?')">Bei ya logo?</button>
+      <button class="quick-btn" onclick="botReply('Asante')">Asante</button>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Andika swali...">
+      <button class="btn btn-primary" onclick="sendMsg()">Tuma</button>
+    </div>
+  </div>
+
+  <div class="card" id="maoni">
+    <h2 style="margin-bottom:20px;color:#16213e;font-size:2rem">WATEJA WETU WASEMA</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">⭐</div>
+        <p>"Notes za Form 4 nilizopata hapa zilinisaidia kupata A. Mitaala mpya imeelezwa vizuri sana. Asanteni JUKWAA BORA!"</p>
+        <h4>- Fatuma A., Mwanza</h4>
+      </div>
+      <div class="testi-card">
+        <div class="stars">⭐</div>
+        <p>"Logo yangu ya duka la nguo wameitengeneza moto! Tangu niweke logo mpya client wananipigia kila siku. Kazi safi."</p>
+        <h4>- Baraka L., Dar</h4>
+      </div>
+      <div class="testi-card">
+        <div class="stars">⭐</div>
+        <p>"Wazo la biashara na budget yake wamenipa kamili. Nimeanza biashara ya chips na sasa niko sawa. Wazo bora!"</p>
+        <h4>- Zainabu K., Arusha</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="card contact" id="wasiliana">
+    <h2 style="margin-bottom:20px;font-size:2.2rem">TAYARI KUANZA?</h2>
+    <p style="margin-bottom:35px;font-size:1.25rem">Bofya WhatsApp tuongee mradi wako sasa hivi</p>
+    <!-- NAMBA YAKO IMEWEKWA HAPA MKUU -->
+    <a href="https://wa.me/255694452091" class="btn btn-whatsapp" target="_blank">💬 Piga WhatsApp 0694452091</a>
+  </div>
+</section>
+
+<footer>© 2026 JUKWAA BORA. Haki zote zimehifadhiwa.</footer>
+
+<script>
+// ADMIN GALLERY - CHAGUA MARA 1 TU HALAFU INAFUNGWA
+function previewImage(event, imgId, pId, btnId, confirmId){
+  const img = document.getElementById(imgId);
+  const p = document.getElementById(pId);
+  const confirmBtn = document.getElementById(confirmId);
+
+  img.src = URL.createObjectURL(event.target.files[0]);
+  img.style.display = 'block';
+  p.style.display = 'none';
+  confirmBtn.style.display = 'inline-block';
+}
+
+function lockImage(boxId, confirmId, btnId, lockId, imgId){
+  const box = document.getElementById(boxId);
+  const confirmBtn = document.getElementById(confirmId);
+  const btn = document.getElementById(btnId);
+  const lockMsg = document.getElementById(lockId);
+  const img = document.getElementById(imgId);
+
+  confirmBtn.style.display = 'none';
+  btn.style.display = 'none';
+  lockMsg.style.display = 'block';
+  box.style.border = '3px solid #28a745';
+  box.style.background = '#e8f5e9';
+
+  localStorage.setItem(boxId + '_img', img.src);
+  localStorage.setItem(boxId + '_locked', 'true');
+}
+
+window.onload = function(){
+  ['box1','box2'].forEach(boxId=>{
+    if(localStorage.getItem(boxId + '_locked') === 'true'){
+      const img = document.getElementById(boxId === 'box1'? 'img1' : 'img2');
+      const p = document.getElementById(boxId === 'box1'? 'p1' : 'p2');
+      const btn = document.getElementById(boxId === 'box1'? 'btn1' : 'btn2');
+      const confirmBtn = document.getElementById(boxId === 'box1'? 'confirm1' : 'confirm2');
+      const lockMsg = document.getElementById(boxId === 'box1'? 'lock1' : 'lock2');
+      const box = document.getElementById(boxId);
+
+      img.src = localStorage.getItem(boxId + '_img');
+      img.style.display = 'block';
+      p.style.display = 'none';
+      btn.style.display = 'none';
+      confirmBtn.style.display = 'none';
+      lockMsg.style.display = 'block';
+      box.style.border = '3px solid #28a745';
+      box.style.background = '#e8f5e9';
+    }
+  });
+}
+
+// CHATBOT
+const chatDisplay = document.getElementById('chatDisplay');
+function addMsg(text, cls){
+  chatDisplay.innerHTML += `<div class="${cls}">${text}</div>`;
+  chatDisplay.scrollTop = chatDisplay.scrollHeight;
+}
+
+function botReply(msg){
+  document.getElementById('userInput').value = msg;
+  sendMsg();
+}
+
+function sendMsg(){
+  const input = document.getElementById('userInput');
+  const msg = input.value.trim().toLowerCase();
+  if(!msg) return;
+  addMsg(input.value, 'user-msg');
+  input.value = '';
+
+  let reply = "Tuma WhatsApp 0694452091 kwa maelezo zaidi mkuu 👇";
+
+  if(msg.includes('huduma')){
+    reply = "Huduma zetu 5:\n1. 📚 Notes Form 3-6 Mitaala Mpya\n2. 📢 Matangazo ya Biashara\n3. 🎨 Logo, Poster, CV\n4. 💻 Mafunzo Kipato Online\n5. 📊 Project Planning & Budget";
+  }
+  else if(msg.includes('asante')){
+    reply = "Karibu sana mkuu 🙏 JUKWAA BORA tunahudumu kwa wewe!";
+  }
+  else if(msg.includes('logo') && msg.includes('bei')){
+    reply = "Logo inaanzia TSh 15,000. Tuma WhatsApp 0694452091.";
+  }
+
+  setTimeout(()=>addMsg(reply, 'bot-msg'), 600);
+}
+
+document.getElementById('userInput').addEventListener('keypress', e=>{
+  if(e.key==='Enter') sendMsg();
+});
+</script>
+</body>
+</html>
